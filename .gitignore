@@ -1,0 +1,25 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# Env
+.venv/
+venv/
+ENV/
+env/
+
+# Database
+*.db
+
+# Flask
+instance/
+
+# Coverage
+htmlcov/
+.coverage
+
+# Editor
+.vscode/
+.idea/
