@@ -29,6 +29,11 @@
       <label>Password</label>
       <input type="password" name="password" required>
       <button type="submit">Register</button>
+      <div class="footer-links">
+        <a href="{{ url_for('auth.login') }}">Already have an account?</a>
+        <span>·</span>
+        <a href="{{ url_for('main.index') }}">Home</a>
+      </div>
     </form>
   </body>
 </html>

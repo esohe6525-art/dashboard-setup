@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Task Tracker API Documentation</title>
+    <style>
+      body { font-family: Arial, sans-serif; background: #f4f6f8; margin: 0; padding: 40px; color: #111827; }
+      .container { max-width: 900px; margin: 0 auto; background: white; padding: 32px; border-radius: 16px; box-shadow: 0 20px 50px rgba(15, 23, 42, 0.08); }
+      h1, h2 { margin-top: 0; }
+      pre { background: #f3f4f6; padding: 16px; border-radius: 12px; overflow-x: auto; }
+      ul { padding-left: 20px; }
+      .endpoint { margin-bottom: 24px; }
+      .method { font-weight: 700; }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Task Tracker API Documentation</h1>
+      <p>A small REST API for managing tasks with Flask.</p>
+
+      <div class="endpoint">
+        <h2>GET /tasks</h2>
+        <p>Retrieve all tasks.</p>
+        <p>Response:</p>
+        <pre>[{"id": 1, "title": "Buy groceries", "description": "Eggs", "completed": false, "created_at": "..."}]</pre>
+      </div>
+
+      <div class="endpoint">
+        <h2>GET /tasks/&lt;id&gt;</h2>
+        <p>Retrieve one task by ID.</p>
+        <p>Response:</p>
+        <pre>{"id": 1, "title": "Buy groceries", "description": "Eggs", "completed": false, "created_at": "..."}</pre>
+      </div>
+
+      <div class="endpoint">
+        <h2>POST /tasks</h2>
+        <p>Create a new task.</p>
+        <p>Body (JSON):</p>
+        <pre>{"title": "Buy groceries", "description": "Milk, eggs", "completed": false}</pre>
+        <p>Response:</p>
+        <pre>{"id": 1, "title": "Buy groceries", "description": "Milk, eggs", "completed": false, "created_at": "..."}</pre>
+      </div>
+
+      <div class="endpoint">
+        <h2>PUT /tasks/&lt;id&gt;</h2>
+        <p>Update an existing task.</p>
+        <p>Body (JSON):</p>
+        <pre>{"title": "Buy groceries", "completed": true}</pre>
+      </div>
+
+      <div class="endpoint">
+        <h2>DELETE /tasks/&lt;id&gt;</h2>
+        <p>Delete a task by ID.</p>
+        <p>Response:</p>
+        <pre>{"message": "Task deleted successfully."}</pre>
+      </div>
+    </div>
+  </body>
+</html>
